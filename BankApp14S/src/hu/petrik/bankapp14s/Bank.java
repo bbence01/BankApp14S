@@ -63,7 +63,7 @@ public class Bank {
         
         if( !(sz.startsWith(elotag)) )
         {
-            throw new AssertionError("Nem megfelelő Bankkód");
+            throw new IllegalArgumentException("Nem megfelelő Bankkód");
         }
         
         

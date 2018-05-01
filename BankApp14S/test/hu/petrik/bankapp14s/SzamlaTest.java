@@ -45,9 +45,15 @@ public class SzamlaTest {
         Szamla sz = new Szamla("1234-5678", 1000);
     }
     
-     @Test(expected = AssertionFailedError.class)
+     @Test(expected = IllegalArgumentException.class)
     public void joelotag() {
+        
+         Bank bank = new Bank("123");
+        
         Szamla sz = new Szamla("45641234-56785678-00000000", 50000);
+        
+        bank.ujSzamla(sz);
+        
     }
    
 }
